@@ -1,0 +1,62 @@
+<head>
+    
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+   <!-- Compiled and minified JavaScript -->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script> 
+   <style>
+       
+       
+       
+   </style>
+</head>
+<body>
+<nav>
+    <div class="nav-wrapper blue">
+      <a href="/" class="brand-logo">Home Page</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      
+      
+        <li><a href="/about-me">me</a></li>
+        <li><a href="/about-app">about app</a></li>
+        <li><a href="/contact-us">Contact info</a></li>
+     
+     
+      </ul>
+    </div>
+  </nav>
+   <div class="container">
+       
+         
+        <% data.forEach(function(book) {%>
+        <div>
+            <h2><%= book.title %></h2>
+            
+            <img src="<%= book.thumbnail %>" />
+            
+            <p><%= book.subtitle %></p>
+            
+            <p><%= book.authors%></p>
+            
+            <p><%=book.publishedDate %></p>
+            
+            <p><%= book.description%></p>
+            
+            <p><%=book.pageCount %></p>
+            
+            <p><%=book.categories %></p>
+            
+            <p><%=book.maturityRating %></p>
+            
+            
+             
+       
+        </div>
+             
+        <% }) %>
+       
+       
+   </div>
+</body>
